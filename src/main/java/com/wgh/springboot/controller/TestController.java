@@ -44,7 +44,7 @@ public class TestController {
     @GetMapping("/stu")
     public Student student() {
         System.out.println("SpringBoot Test student");
-        return new Student(123, 534631, "佩德罗");
+        return new Student( 534631, "佩德罗");
     }
 
     @GetMapping("/err")
@@ -72,7 +72,7 @@ public class TestController {
         System.out.println("------------ testGetStu ------------");
         System.out.println("name:"+name);
         //模拟查询用户
-        Student student = new Student(123, 12876721, name);
+        Student student = new Student(12876721, name);
         student.setAge(10);
         student.setScore(97.8);
 

@@ -1,9 +1,12 @@
 package com.wgh.springboot.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by wgh on 2021/3/15.
  */
-public class Student {
+public class Student  implements Serializable {
+
     private long id;
     private long stunum;
     private String name;
@@ -13,8 +16,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(long id, long stunum, String name) {
-        this.id = id;
+    public Student(long stunum, String name) {
         this.stunum = stunum;
         this.name = name;
     }
