@@ -13,6 +13,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.Map;
 
@@ -21,6 +22,7 @@ import java.util.Map;
  自动装配 web 依赖的环境
 
  **/
+@EnableScheduling//开启都是任务
 @Import(CacheConfirguration.class)
 @SpringBootApplication
 public class SpringbootApplication {
