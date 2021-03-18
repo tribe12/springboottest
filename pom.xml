@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <!-- <parent>
-        <artifactId>demo</artifactId>
-        <groupId>com.example</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../springboot/demo/pom.xml</relativePath>
-    </parent>-->
+    <!-- <parent>
+         <artifactId>demo</artifactId>
+         <groupId>com.example</groupId>
+         <version>0.0.1-SNAPSHOT</version>
+         <relativePath>../springboot/demo/pom.xml</relativePath>
+     </parent>-->
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wgh.springboottest</groupId>
@@ -21,7 +21,7 @@
         <!--<version>2.4.3</version>-->
         <version>1.5.6.RELEASE</version>
 
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <properties>
@@ -54,10 +54,10 @@
 
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
         <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.1.11</version>-->
-            <!--<scope>compile</scope>-->
+        <!--<groupId>ch.qos.logback</groupId>-->
+        <!--<artifactId>logback-classic</artifactId>-->
+        <!--<version>1.1.11</version>-->
+        <!--<scope>compile</scope>-->
         <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
@@ -67,8 +67,6 @@
             <version>2.7</version>
             <scope>compile</scope>
         </dependency>
-
-
 
 
         <!--Freemarker-->
@@ -183,6 +181,31 @@
             <version>3.4.4</version>
         </dependency>
 
+
+        <!--EhCache 缓存-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+
+
+        <!--Redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+
+        <!--Mongodb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
