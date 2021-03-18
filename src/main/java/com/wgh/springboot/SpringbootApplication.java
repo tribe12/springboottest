@@ -22,6 +22,7 @@ import java.util.Map;
  自动装配 web 依赖的环境
 
  **/
+//@MapperScan("mybatis/mapper")
 @EnableScheduling//开启都是任务
 @Import(CacheConfirguration.class)
 @SpringBootApplication

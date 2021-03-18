@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by wgh on 2021/3/15.
  */
-public class Student  implements Serializable {
+public class Student implements Serializable {
 
     private long id;
     private long stunum;
@@ -19,6 +19,10 @@ public class Student  implements Serializable {
     public Student(long stunum, String name) {
         this.stunum = stunum;
         this.name = name;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getId() {

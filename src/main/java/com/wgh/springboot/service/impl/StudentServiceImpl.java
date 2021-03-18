@@ -18,26 +18,29 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int insert(Student student) {
-        if(student == null){
-            student = new Student(3656,"佩奇");
-            student.setAge(10);
-            student.setScore(98);
+        if (student == null) {
+            return 0;
         }
         return studentDao.insert(student);
     }
 
     @Override
     public int deleteByStunum(long stunum) {
-        return 0;
+        return studentDao.deleteByStunum(stunum);
     }
 
     @Override
     public int update(Student student) {
-        return 0;
+        if (student == null) {
+            return 0;
+        }
+        return studentDao.update(student);
     }
 
     @Override
     public Student getByStunum(long stunum) {
-        return null;
+        Student student = studentDao.getByStunum(stunum);
+        System.out.println("res student:" + student);
+        return student;
     }
 }

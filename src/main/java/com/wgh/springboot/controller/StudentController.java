@@ -1,22 +1,49 @@
 package com.wgh.springboot.controller;
 
+import com.wgh.springboot.bean.Student;
 import com.wgh.springboot.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by wgh on 2021/3/16.
  */
-@RestController("/student")
+@RestController
+@RequestMapping("/student")
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/insert")
-    public int student() {
+    @PostMapping("/insert")
+    public int student(Student student) {
         System.out.println("/student/insert");
-        return studentService.insert(null);
+        System.out.println("student:" + student);
+        return studentService.insert(student);
     }
+
+
+    @DeleteMapping("/deletebystunum")
+    public int deleteByStunum(long stunum) {
+        System.out.println("/student/deleteByStunum");
+        System.out.println("stunum:" + stunum);
+        return studentService.deleteByStunum(stunum);
+    }
+
+
+    @PostMapping("/update")
+    public int update(Student student) {
+        System.out.println("/student/update");
+        System.out.println("student:" + student);
+        return studentService.update(student);
+    }
+
+
+    @GetMapping("/getbystunum")
+    public Student getByStunum(long stunum) {
+        System.out.println("/student/getbystunum");
+        System.out.println("stunum:" + stunum);
+        return studentService.getByStunum(stunum);
+    }
+
 }
