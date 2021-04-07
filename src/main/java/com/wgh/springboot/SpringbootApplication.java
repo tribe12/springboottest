@@ -4,11 +4,11 @@ package com.wgh.springboot;
  * Created by wgh on 2021/3/12.
  */
 
-import com.wgh.springboot.config.Cache;
 import com.wgh.springboot.config.CacheConfirguration;
 import com.wgh.springboot.config.DataSourceProperties;
 import com.wgh.springboot.config.WebConfig;
 import com.wgh.springboot.config.encoding.EncodingConvertor;
+import com.wgh.springboot.config.Cache;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;

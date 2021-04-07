@@ -1,7 +1,7 @@
 package com.wgh.springboot.service.impl;
 
-import com.wgh.springboot.bean.Department;
 import com.wgh.springboot.mapper.DepartmentMapper;
+import com.wgh.springboot.bean.Department;
 import com.wgh.springboot.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
