@@ -3,7 +3,7 @@ package com.wgh.springboot.config.timedtask.scheduled;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -19,6 +19,6 @@ public class Schedule {
 
     @Scheduled(fixedRate = 30000)//每30秒执行一次
     public void task() {
-        System.out.println("Schedule启动定时任务:" + new Date());
+        System.out.println("Schedule启动定时任务:" + LocalDateTime.now());
     }
 }
