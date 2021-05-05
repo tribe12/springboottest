@@ -15,5 +15,5 @@ public interface PayStrategy {
      * @param channelId
      * @return
      */
-    public BigDecimal getPrice(Integer goodsId, Integer channelId);
+    BigDecimal getPrice(Integer goodsId, Integer channelId);
 }

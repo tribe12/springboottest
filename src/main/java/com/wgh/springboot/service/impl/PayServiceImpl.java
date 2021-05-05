@@ -13,14 +13,12 @@ import java.math.BigDecimal;
 @Service
 public class PayServiceImpl implements PayService {
 
-    private PayStrategy payStrategy;
 
 
     @Override
     public BigDecimal getPrice(Integer goodsId, Integer channelId) {
-        PayStrategyFactory payStrategyFactory = PayStrategyFactory.getInstance();
-
-        payStrategy = payStrategyFactory.creatPayStrategy(channelId);
+        PayStrategyFactory factory = PayStrategyFactory.getInstance();
+        PayStrategy payStrategy = factory.getPayStrategy(channelId);
         return payStrategy.getPrice(goodsId, channelId);
     }
 }

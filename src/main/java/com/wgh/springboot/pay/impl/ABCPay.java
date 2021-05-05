@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 
 /**
- * ICBC的支付策略
+ * ABC的支付策略
  * <p>
  * 这里借用Spring中提供的InitializingBean接口，
  * 这个接口为Bean提供了属性初始化后的处理方法，
@@ -23,7 +23,7 @@ import java.math.BigDecimal;
  * Created by wgh on 2021/5/3.
  */
 @Service
-public class ICBCPay implements PayStrategy, InitializingBean {
+public class ABCPay implements PayStrategy, InitializingBean {
 
     @Autowired
     private PayChannelMapper payChannelMapper;
@@ -36,7 +36,7 @@ public class ICBCPay implements PayStrategy, InitializingBean {
 
         Goods goods = goodsMapper.getGoods(goodsId);
         PayChannel payChannel = payChannelMapper.getPayChannel(channelId);
-        //中国工商银行特有逻辑
+        //中国农业银行特有逻辑
         //.......
         if (goods != null && payChannel != null) {
             return goods.getPrice().multiply(payChannel.getDiscount());
@@ -46,7 +46,7 @@ public class ICBCPay implements PayStrategy, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(" ICBCPay.afterPropertiesSet()");
-        PayStrategyFactory.getInstance().register(1, this);
+        System.out.println(" ABCPay.afterPropertiesSet()");
+        PayStrategyFactory.getInstance().register(4, this);
     }
 }
