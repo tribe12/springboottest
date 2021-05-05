@@ -28,6 +28,7 @@ public class GlobalDefaultExceptionHandler {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("code", 10086);
         map.put("msg", e.getMessage());
+        e.printStackTrace();
         return map;
     }
 }
