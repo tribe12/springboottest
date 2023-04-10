@@ -24,7 +24,7 @@ import java.util.Map;
 
  **/
 @EnableCaching//开启ehcache缓存
-@EnableScheduling//开启都是任务
+@EnableScheduling//开启定时任务
 @Import(CacheConfirguration.class)
 @SpringBootApplication
 public class SpringbootApplication {
